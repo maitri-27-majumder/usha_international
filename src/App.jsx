@@ -1,26 +1,22 @@
-import { useState } from 'react'
+import "./App.css";
 
-import './App.css'
+import "./App.css";
 
-import React from 'react'
-import Header from './components/Header'
-import Slider from './components/Slider'
-import AboutUs from './components/AboutUs'
-import WhyChooseUs from './components/WhyChooseUs'
-import Products from './components/Product'
-import Reviews from './components/Reviews'
-import Footer from './components/Footer'
-import Aboutus from './Pages/Aboutus'
-import Contactus from './Pages/Contactus'
-import ProductPage from './Pages/ProductPage'
-import { mainProducts, subProducts } from './util/productData.js';
-import SourcingAgentPage from './Pages/SourcingAgentPage'
+import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Aboutus from "./Pages/Aboutus";
+import Contactus from "./Pages/Contactus";
+import ProductPage from "./Pages/ProductPage";
+import { mainProducts, subProducts } from "./util/productData.js";
+import SourcingAgentPage from "./Pages/SourcingAgentPage";
 // import assamtea from './assets/AssamTea.png';
 // import greentea from './assets/greentea.png';
 // import pinktea from './assets/pinktea.png';
 // import whitetea from './assets/whitetea.png';
 // import blacktea from './assets/blacktea.png';
-
+import Home from "./Pages/Home";
+import Team from "./Pages/Team";
 
 // const mainProduct = {
 //   id: 1,
@@ -59,18 +55,16 @@ import SourcingAgentPage from './Pages/SourcingAgentPage'
 const App = () => {
   return (
     <>
-    <Header/>
-   {/* <Aboutus/> */}
-   <SourcingAgentPage/>
-   {/* <Contactus/> */}
-   {/* <ProductPage mainProduct={mainProducts.spices} subProducts={subProducts.spices} /> */}
-  
-    <Footer/>
+      <Header />
+      {/* <Aboutus/> */}
+      <SourcingAgentPage />
+      {/* <Contactus/> */}
+      {/* <ProductPage mainProduct={mainProducts.spices} subProducts={subProducts.spices} /> */}
+
+      <Footer />
+      {/* <Home /> */}
     </>
-  )
-}
+  );
+};
 
 export default App;
-  
-
-

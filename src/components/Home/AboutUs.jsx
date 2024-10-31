@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../styles/AboutUs.scss';
-import aboutImage from '../assets/aboutus1.png'; // Update with correct path
+import '../../styles/Home/AboutUs.scss';
+import aboutImage from '../../assets/aboutus1.png'; // Update with correct path
 
 const AboutUs = () => {
   const [inView, setInView] = useState(false);
@@ -46,7 +46,7 @@ const AboutUs = () => {
           quality, global reach, and a commitment to delivering excellence with every order.
         </p>
         <a href="/aboutus" className="learn-more">
-          {'>'} Learn more
+          Learn More
         </a>
       </div>
     </div>

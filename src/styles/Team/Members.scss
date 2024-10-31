@@ -1,0 +1,110 @@
+
+.members-wrapper {
+  display: flex;
+  gap: 10px;
+  max-width: 1000px;
+  padding: 20px;
+  margin: auto;
+  height: calc(100vh - 200px);
+  &:has(.members-item:hover) {
+    > :not(.members-item:hover) {
+      .member-img {
+        filter: grayscale(1);
+      }
+    }
+  }
+  .members-item {
+    flex: 1;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    > div {
+      overflow: hidden;
+    }
+    color: rgb(235, 235, 235);
+    .member-img {
+      filter: grayscale(0);
+    }
+    img {
+      height: 650px;
+      object-fit: cover;
+      object-position: -120px 0;
+
+      transition: filter 0.2s;
+    }
+
+    &:nth-child(2) {
+      img {
+        transform: scale(1.5);
+        object-position: -100px 0;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        object-position: -110px 0;
+      }
+    }
+  }
+  .member-data {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    width: 100%;
+    // z-index: 1000;
+    top: 0;
+    // color: aliceblue;
+    padding: 40px 0 60px;
+    > div {
+        padding: 0 20px;
+      &:first-child {
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.member-info-drawer {
+    background-color: rgb(255, 249, 242) !important;
+    img {
+        border-radius: 10px;
+    }
+  .member-data {
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    > div {
+      &:first-child {
+        font-size: 32px;
+        font-weight: 900;
+        margin-top: 20px;
+        border-left: 2px solid red;
+        padding-left: 20px;
+        text-transform: uppercase;
+      }
+      &:nth-child(2) {
+        font-size: 32px;
+        font-weight: 900;
+        padding-bottom: 10px;
+        border-left: 2px solid red;
+        padding-left: 20px;
+        text-transform: uppercase;
+      }
+      &:nth-child(3) {
+        font-size: 22px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        border-left: 2px solid red;
+        padding-left: 20px;
+      }
+      &:last-child {
+        font-size: 16px;
+        color: rgb(61, 61, 61);
+      }
+    }
+  }
+}
