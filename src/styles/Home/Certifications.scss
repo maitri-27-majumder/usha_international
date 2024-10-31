@@ -1,0 +1,21 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 13));
+  }
+}
+
+.slide-track {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  .slide{
+    padding: 15px 50px;
+  }
+}
+.infinite-slider {
+    overflow-x: hidden;
+    padding: 10px;
+    background-color: #FFF;
+}

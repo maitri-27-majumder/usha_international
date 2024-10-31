@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../styles/WhyChooseUs.scss"; // Assuming the SCSS file is named like this
+import "../../styles/Home/WhyChooseUs.scss"; // Assuming the SCSS file is named like this
 
 const WhyChooseUs = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,32 +7,53 @@ const WhyChooseUs = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setIsVisible(true); // Trigger animation when section is in view
-            } else {
-              setIsVisible(false); // Reset animation when section is out of view
-            }
-          });
-        },
-        { threshold: 0.2 } // Trigger when 20% of the section is visible
-      );
-  
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
-      }
-  
-      return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Set animation when section enters view
         }
-      };
-    }, []);
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //       (entries) => {
+  //         entries.forEach((entry) => {
+  //           if (entry.isIntersecting) {
+  //             setIsVisible(true); // Trigger animation when section is in view
+  //           } else {
+  //             setIsVisible(false); // Reset animation when section is out of view
+  //           }
+  //         });
+  //       },
+  //       { threshold: 0.2 } // Trigger when 20% of the section is visible
+  //     );
+  
+  //     if (sectionRef.current) {
+  //       observer.observe(sectionRef.current);
+  //     }
+  
+  //     return () => {
+  //       if (sectionRef.current) {
+  //         observer.unobserve(sectionRef.current);
+  //       }
+  //     };
+  //   }, []);
 
   return (
     <div className="why-choose-us-container" ref={sectionRef}>
-      <div className="divider"></div>
+      {/* <div className="divider"></div> */}
       <div className="heading-container">
         <h2>Why To Choose Us</h2>
         <div className="green-line"></div>
