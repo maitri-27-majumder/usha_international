@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.sourcing-agent-page {
+    margin-top: 80px;
+    /* Header Banner Section */
+    .header-banner {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      background-image: url('/public/sourcingagent.png');  // Replace with your image path
+      background-size: cover;
+      background-position: right center;
+  
+      .overlay-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 70%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 4rem;
+        color: #ffffff;
+  
+        h1 {
+          font-family: "Lato", sans-serif;
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+  
+        p {
+          font-family: "Raleway", sans-serif;
+          font-size: 1.2rem;
+          max-width: 500px;
+          margin-bottom: 1.5rem;
+        }
+  
+        .icon-box {
+          display: flex;
+          gap: 1rem;
+  
+          .icon {
+            font-size: 2.5rem;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  
+    /* Stats Section */
+    .stats-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 3rem;
+      background-color: #f4f3f2;
+      color: #004b3e;
+  
+      .stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        h2 {
+          font-family: "Lato", sans-serif;
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin: 0;
+        }
+  
+        p {
+          font-family: "Raleway", sans-serif;
+          font-size: 1rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+    .benefits-section {
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        gap: 100px;
+        padding: 20px 120px;
+        background-color: #f7f7f7;
+      
+        .benefits-image-wrapper {
+          position: relative;
+          flex: 1;
+          max-width: 400px;
+          margin-right: 2rem;
+      
+          .benefits-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+          }
+      
+          .badge-box {
+            position: absolute;
+            top: 65%;
+            left: 95%;
+            padding: 10px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:#02835a;
+            color: white;
+            font-weight: bold;
+            width: 120px;
+            height: 120px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+            span{
+              font-size: 0.9rem;
+            }
+      
+            .anticon {
+              font-size: 1.2rem;
+              margin-right: 8px;
+            }
+          }
+        }
+      
+        .benefits-content {
+          flex: 2;
+      
+          h3 {
+            color: #02835a;
+            font-family: "Lato", sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+          }
+      
+          h2 {
+            font-family: "Lato", sans-serif;
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: bold;
+            margin: 0;
+          }
+      
+          p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+          }
+      
+          ul {
+            margin-top: 20px;
+            font-family: "Raleway", sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap:20px;
+            list-style: disc;
+            padding-left: 1.5rem;
+            font-size: 1rem;
+            color: #444;
+      
+            li {
+                flex: 1 1 45%; // Ensures two columns
+                font-weight: bold;
+                margin-bottom: 1rem;
+        
+                // Only the list bullet will be red
+                &::marker {
+                  color:#02835a;
+                }
+              
+                .point-description {
+                font-family: "Raleway", sans-serif;
+                  font-size: 0.9rem;
+                  color: #555;
+                  margin-top: 0.3rem;
+                //   padding-left: rem;
+                  font-weight: 300;
+                }
+              }
+      }
+      
+  
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .header-banner {
+        height: 400px;
+  
+        .overlay-content {
+          padding-left: 1.5rem;
+  
+          h1 {
+            font-size: 1.8rem;
+          }
+  
+          p {
+            font-size: 1rem;
+          }
+  
+          .icon-box {
+            .icon {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+  
+      .stats-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+  
+        .stat {
+          h2 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+    }
+}

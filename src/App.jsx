@@ -14,6 +14,7 @@ import Aboutus from './Pages/Aboutus'
 import Contactus from './Pages/Contactus'
 import ProductPage from './Pages/ProductPage'
 import { mainProducts, subProducts } from './util/productData.js';
+import SourcingAgentPage from './Pages/SourcingAgentPage'
 // import assamtea from './assets/AssamTea.png';
 // import greentea from './assets/greentea.png';
 // import pinktea from './assets/pinktea.png';
@@ -59,7 +60,8 @@ const App = () => {
   return (
     <>
     <Header/>
-   <Aboutus/>
+   {/* <Aboutus/> */}
+   <SourcingAgentPage/>
    {/* <Contactus/> */}
    {/* <ProductPage mainProduct={mainProducts.spices} subProducts={subProducts.spices} /> */}
   
