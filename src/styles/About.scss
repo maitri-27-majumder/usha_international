@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 $heading-color: #02835a;
 
 .aboutcontainer {
-  
   padding-top: 140px;
   display: flex;
   flex-direction: column;
@@ -15,19 +13,31 @@ $heading-color: #02835a;
   line-height: 1.6;
 
   .heading {
-    color: $heading-color;
-    font-family: "Lato", sans-serif;
-    font-weight: 600;
-    font-size: medium;
+    position: relative;
+    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    z-index: 2;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      bottom: 0;
+      left: 45%;
+      border-bottom: 2px solid #02835a;
+    }
   }
 
   .paragraph {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 50px;
+    // letter-spacing: 10%;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
   }
 
   .video-container {
@@ -35,8 +45,8 @@ $heading-color: #02835a;
     justify-content: center;
     margin-bottom: 50px;
     iframe {
-        border-radius: 16px; // Add border radius to the iframe
-        overflow: hidden; // Ensure the border radius is applied
-      }
+      border-radius: 16px; // Add border radius to the iframe
+      overflow: hidden; // Ensure the border radius is applied
+    }
   }
 }
