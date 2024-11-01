@@ -11,14 +11,12 @@ import Certifications from '../components/Home/Certifications'
 const Home = () => {
   return (
     <>
-    <Header/>
     <Slider/>
     <AboutUs/>
     <WhyChooseUs/>
     <Certifications />
     <Products/>
     <Reviews/>
-    <Footer/>
     </>
   )
 }

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import '../../styles/Home/AboutUs.scss';
-import aboutImage from '../../assets/aboutus1.png'; // Update with correct path
+import React, { useEffect, useRef, useState } from "react";
+import "../../styles/Home/AboutUs.scss";
+import aboutImage from "../../assets/aboutus1.png"; // Update with correct path
 
 const AboutUs = () => {
   const [inView, setInView] = useState(false);
@@ -29,21 +29,32 @@ const AboutUs = () => {
 
   return (
     <div ref={sectionRef} className="about-us-container">
-      <div className={`image-container ${inView ? 'animate' : ''}`}>
-        <img src={aboutImage} alt="About Us" />
+      <div className={`image-container ${inView ? "animate" : ""}`}>
+        {/* <img src={aboutImage} alt="About Us" /> */}
+        <iframe
+          width="500"
+          height="300"
+          src="https://www.youtube.com/embed/y_v-ylKFj9g"
+          title="GEMALINK WELCOMES MAIDEN CALL OF HANOI EXPRESS VESSEL (Hapag-Lloyd)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
-      <div className={`text-container ${inView ? 'animate' : ''}`}>
-        
+      <div className={`text-container ${inView ? "animate" : ""}`}>
         <p className="bold-text">
-          Usha International is founded by visionary entrepreneur Suman Saha.
-          As a leader in the export industry, we specialize in premium products
+          Usha International is founded by visionary entrepreneur Suman Saha. As
+          a leader in the export industry, we specialize in premium products
           such as Spices, Ginger, Tea/Coffee, Garlic, Turmeric, Natural Honey,
-          Dry Fruits, and Handicrafts. With a focus on sustainability and excellence.
+          Dry Fruits, and Handicrafts. With a focus on sustainability and
+          excellence.
         </p>
         <p>
-          We prioritize your satisfaction with reliable, professional service and
-          tailored solutions to meet your unique needs. Choose us for unmatched
-          quality, global reach, and a commitment to delivering excellence with every order.
+          We prioritize your satisfaction with reliable, professional service
+          and tailored solutions to meet your unique needs. Choose us for
+          unmatched quality, global reach, and a commitment to delivering
+          excellence with every order.
         </p>
         <a href="/aboutus" className="learn-more">
           Learn More

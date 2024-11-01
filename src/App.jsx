@@ -17,6 +17,7 @@ import SourcingAgentPage from "./Pages/SourcingAgentPage";
 // import blacktea from './assets/blacktea.png';
 import Home from "./Pages/Home";
 import Team from "./Pages/Team";
+import { Outlet } from "react-router-dom";
 
 // const mainProduct = {
 //   id: 1,
@@ -54,16 +55,11 @@ import Team from "./Pages/Team";
 // ];
 const App = () => {
   return (
-    <>
+    <div>
       <Header />
-      {/* <Aboutus/> */}
-      <SourcingAgentPage />
-      {/* <Contactus/> */}
-      {/* <ProductPage mainProduct={mainProducts.spices} subProducts={subProducts.spices} /> */}
-
+      <Outlet />
       <Footer />
-      {/* <Home /> */}
-    </>
+    </div>
   );
 };
 

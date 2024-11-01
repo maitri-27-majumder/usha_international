@@ -1,8 +1,71 @@
 import React from "react";
 import "../styles/Header.scss";
 import Logo from "../assets/ushaLogo.png";
+import { Link, useNavigate } from "react-router-dom";
+import { Dropdown } from "antd";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const items = [
+    {
+      key: '1',
+      label: (
+        <Link to="/products/tea">
+          Tea
+        </Link>
+      ),
+    },
+    {
+      key: '1',
+      label: (
+        <Link to="/products/spices">
+          Spices
+        </Link>
+      ),
+    },
+    {
+      key: '1',
+      label: (
+        <Link to="/products/handicrafts">
+          Handicrafts
+        </Link>
+      ),
+    },
+    {
+      key: '1',
+      label: (
+        <Link to="/products/furniture">
+          Furniture
+        </Link>
+      ),
+    },
+    {
+      key: '1',
+      label: (
+        <Link to="/products/honey">
+          Honey
+        </Link>
+      ),
+    },
+    {
+      key: '1',
+      label: (
+        <Link to="/products/mushroom">
+          Mushroom
+        </Link>
+      ),
+    },
+    {
+      key: '1',
+      label: (
+        <Link to="/products/textile">
+          Textile
+        </Link>
+      ),
+    },
+  ];
+
   return (
     <header className="header">
       <div className="logo">
@@ -12,25 +75,32 @@ const Header = () => {
       <nav className="nav">
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/home">Home</Link>
           </li>
           <li>
-            <a href="#about-us">About Us</a>
+            <Link to="/about-us">About Us</Link>
           </li>
           <li>
-            <a href="#sourcing-agent">Sourcing Agent</a>
+            <Link to="/sourcing-agent">Sourcing Agent</Link>
           </li>
           <li>
-            <a href="#products">Products</a>
+            <Dropdown menu={{ items }}>
+              <a>Products</a>
+            </Dropdown>
           </li>
           <li>
-            <a href="#meet-our-team">Meet Our Team</a>
+            <Link to="/meet-our-team">Meet Our Team</Link>
           </li>
         </ul>
       </nav>
-
       <div className="contact-us">
-        <button>Contact Us</button>
+        <button
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
+          Contact Us
+        </button>
       </div>
     </header>
   );

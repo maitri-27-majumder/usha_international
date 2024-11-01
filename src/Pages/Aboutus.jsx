@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/About.scss"; // Import the SCSS file
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Aboutus = () => {
   return (
-    <>
+    <div>
       <div className="aboutcontainer">
         <div className="heading">
           Quality Products, Global Reach, Trusted Partnerships
@@ -93,7 +95,7 @@ const Aboutus = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -17,7 +17,7 @@
         top: 0;
         left: 0;
         height: 100%;
-        width: 100%;
+        // width: 100%;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 70%);
         display: flex;
         flex-direction: column;
@@ -34,7 +34,7 @@
   
         p {
           font-family: "Raleway", sans-serif;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           max-width: 500px;
           margin-bottom: 1.5rem;
         }
@@ -44,7 +44,7 @@
           gap: 1rem;
   
           .icon {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #ffffff;
           }
         }
@@ -117,6 +117,7 @@
       
             span{
               font-size: 0.9rem;
+              font-family: "Lato", sans-serif;
             }
       
             .anticon {
@@ -173,11 +174,11 @@
               
                 .point-description {
                 font-family: "Raleway", sans-serif;
-                  font-size: 0.9rem;
+                  font-size: 1rem;
                   color: #555;
                   margin-top: 0.3rem;
                 //   padding-left: rem;
-                  font-weight: 300;
+                  font-weight: 400;
                 }
               }
       }

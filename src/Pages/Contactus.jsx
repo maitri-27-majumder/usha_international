@@ -11,7 +11,8 @@ import facebook from "../assets/Facebook.png";
 import insta from "../assets/Instagram.png";
 import linkedin from "../assets/LinkedIN.png";
 import map from "../assets/map.png";
-import banner from "../assets/Contactus_banner.png";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Contactus = () => {
   const {
@@ -41,7 +42,7 @@ const Contactus = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://api.shihaantech/admin/Contact/CreateVisitor",
+        "https://api.shihasantech/admin/Contact/CreatesVisitor",
         {
           method: "POST",
           body: JSON.stringify({
@@ -88,7 +89,7 @@ const Contactus = () => {
       image2: call,
       image3: mail,
       para1: "+919599513207",
-      para2: "Usha@insternational.com",
+      para2: "info@international.com",
     },
     {
       image: social,
@@ -96,25 +97,32 @@ const Contactus = () => {
       image2: linkedin,
       image3: facebook,
       image4: insta,
-      para1: "Usha International",
+      para1: "Suman Saha",
       para2: "Usha International",
       para3: "Usha International",
+      url1: "https://www.linkedin.com/in/suman-saha-14794a328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      url2: "https://www.facebook.com/profile.php?id=61566565374203&mibextid=ZbWKwL",
+      url3: "https://www.instagram.com/ushainternational.co/profilecard/?igsh=bHFsamhjYjZic3py",
     },
   ];
+
+  const handlePage = (url) => {
+    window.open(url, "_blank");
+  };
 
   return (
     <>
       <div className="banner">
-        <img src={banner}/>
+        {/* <img src={banner} /> */}
+        <div className="">
+          <div className="heading">Contact Us</div>
+          <p>
+            Your questions, feedback, and inquiries are important to us—reach
+            out today for personalized support and seamless solutions!
+          </p>
+        </div>
       </div>
       <div className="sectionwrapper">
-        <div className="">
-        <div className="heading">Contact Us</div>
-        <p>
-          Your questions, feedback, and inquiries are important to us—reach out
-          today for personalized support and seamless solutions!
-        </p>
-        </div>
         <div className="contentwrapper">
           <div>
             {contactCard.map((item, index) => {
@@ -127,22 +135,40 @@ const Contactus = () => {
                     </div>
                     <div className="carditemcontent">
                       <div className="carditempara">
-                        <div>
-                          <img src={item.image2} />
-                        </div>
-                        {item.para1}
+                        <img src={item.image2} />
+                        <span
+                          onClick={() => {
+                            if (item.url1) {
+                              handlePage(item.url1);
+                            }
+                          }}
+                        >
+                          {item.para1}
+                        </span>
                       </div>
                       <div className="carditempara">
-                        <div>
-                          <img src={item.image3} />
-                        </div>
-                        {item.para2}
+                        <img src={item.image3} />
+                        <span
+                          onClick={() => {
+                            if (item.url2) {
+                              handlePage(item.url2);
+                            }
+                          }}
+                        >
+                          {item.para2}
+                        </span>
                       </div>
                       <div className="carditempara">
-                        <div>
-                          <img src={item.image4} />
-                        </div>
-                        {item.para3}
+                        <img src={item.image4} />
+                        <span
+                          onClick={() => {
+                            if (item.url3) {
+                              handlePage(item.url3);
+                            }
+                          }}
+                        >
+                          {item.para3}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -231,7 +257,6 @@ const Contactus = () => {
           </div>
         </div>
       </div>
-
       <div className="worldwrapper">
         <div className="secttion2heading">Global Presence</div>
         <img src={map} />
