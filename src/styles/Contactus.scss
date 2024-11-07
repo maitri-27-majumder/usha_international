@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 .sectionwrapper {
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display", serif;
   padding: 60px 13vw 30px;
   gap: 30px;
   position: relative;
@@ -20,7 +19,7 @@
       .helpfield {
         text-align: center;
         > span {
-          color: #487fe9;
+          color: #1f493d;
           > a {
             text-decoration: none;
           }
@@ -56,6 +55,7 @@
       input,
       textarea {
         display: block;
+        font-family: "Playfair Display", serif;
         box-sizing: border-box;
         width: 100%;
         border-radius: 10px;
@@ -79,8 +79,8 @@
 
       button[type="submit"],
       input[type="submit"] {
-        background: #101828;
-        color: white;
+        background:  #b8d0b5;
+        color:#333;
         border: none;
         margin-top: 40px;
         padding: 20px;
@@ -90,7 +90,8 @@
 
       button[type="submit"]:hover,
       input[type="submit"]:hover {
-        background: #02835a;
+        background: #1f493d;
+        color: white;
       }
 
       button[type="submit"]:active,
@@ -124,7 +125,7 @@
       button[type="button"] {
         display: block;
         appearance: none;
-        background: #333;
+        background:  #b8d0b5;
         color: black;
         border: none;
         text-transform: uppercase;
@@ -140,7 +141,7 @@
         display: block;
         appearance: none;
         margin-top: 40px;
-        border: 1px solid #333;
+        border: 1px solid  #b8d0b5;
         margin-bottom: 20px;
         text-transform: uppercase;
         padding: 10px 20px;
@@ -150,6 +151,7 @@
   }
 
   .sectionheading {
+    font-family: "Playfair Display", serif;
     position: relative;
     align-items: center;
     text-align: center;
@@ -163,7 +165,7 @@
       width: 90px;
       bottom: 0;
       left: 45%;
-      border-bottom: 2px solid #02835a;
+      border-bottom: 2px solid #1f493d;
     }
   }
   > div {
@@ -178,6 +180,7 @@
     }
   }
   .cardtwrapper {
+    font-family: "Playfair Display", serif;
     display: flex;
     flex-direction: row;
     box-shadow: 0px 0px 3.3px 1px #00000040;
@@ -191,6 +194,7 @@
         display: flex;
         padding: 10px;
         gap: 20px;
+        color: #1f493d;
         font-size: 2.2rem;
         font-weight: 400;
         line-height: 45px;
@@ -223,7 +227,7 @@
   }
 }
 .worldwrapper {
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display", serif;
   align-items: center;
   gap: 30px;
   position: relative;
@@ -238,6 +242,7 @@
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 40px;
+    color: #1f493d;
     // margin-top: 15px;
     z-index: 2;
     &::after {
@@ -246,7 +251,7 @@
       width: 90px;
       bottom: 0;
       left: 45%;
-      border-bottom: 2px solid #02835a;
+      border-bottom: 2px solid #1f493d;
     }
   }
   > img {
@@ -264,7 +269,7 @@
   left: 0;
   z-index: -1;
   width: 100%;
-  font-family: "Roboto", "sanms-serif";
+
   background-image: url('/public/Contactus_banner.png');
   height: 300px;
   text-align: center;
@@ -276,6 +281,7 @@
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: azure;
     // top: 40%;
     // left: 40%;
   }

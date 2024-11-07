@@ -28,39 +28,37 @@ const AboutUs = () => {
   }, []);
 
   return (
+    <>
+    <div className="about_heading">About Us</div>
     <div ref={sectionRef} className="about-us-container">
+      
       <div className={`image-container ${inView ? "animate" : ""}`}>
-        {/* <img src={aboutImage} alt="About Us" /> */}
-        <iframe
-          width="500"
-          height="300"
-          src="https://www.youtube.com/embed/y_v-ylKFj9g"
-          title="GEMALINK WELCOMES MAIDEN CALL OF HANOI EXPRESS VESSEL (Hapag-Lloyd)"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <img src="/about_home_3.png" alt="About Us" />
       </div>
       <div className={`text-container ${inView ? "animate" : ""}`}>
         <p className="bold-text">
-          Usha International is founded by visionary entrepreneur Suman Saha. As
-          a leader in the export industry, we specialize in premium products
-          such as Spices, Ginger, Tea/Coffee, Garlic, Turmeric, Natural Honey,
-          Dry Fruits, and Handicrafts. With a focus on sustainability and
-          excellence.
+          Welcome to Usha International! We appreciate your interest in our
+          company.
+          <br />
         </p>
         <p>
-          We prioritize your satisfaction with reliable, professional service
-          and tailored solutions to meet your unique needs. Choose us for
-          unmatched quality, global reach, and a commitment to delivering
-          excellence with every order.
+        At Usha International, we take pride in curating an exquisite
+          range of products that reflect the rich cultural heritage and
+          craftsmanship of our artisans. Our offerings include aromatic spices,
+          premium teas and coffees, elegant handicrafts, beautifully crafted
+          furniture, and stylish clothing—each item designed to bring quality
+          and charm into your life.<br/><br/>
+          With a strong commitment to excellence and timely delivery, we have
+          built a diverse global clientele that values our dedication to
+          superior quality. Join us in celebrating tradition and craftsmanship
+          with every purchase!
         </p>
         <a href="/aboutus" className="learn-more">
           Learn More
         </a>
       </div>
     </div>
+    </>
   );
 };
 

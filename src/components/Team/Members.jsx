@@ -6,7 +6,7 @@ const members = [
   {
     name: "Suman Saha",
     designation: "Founder & CEO",
-    image: "/members/suman.jpg",
+    image: "/members/suman_img.jpeg",
     description:
       "Suman Saha founded Usha International with a mission to connect global markets and elevate export-import standards. With extensive experience in international trade, we brings expertise, quality focus, and a commitment to customer satisfaction, making Usha International a trusted partner for clients worldwide. His leadership drives the company’s goal of ensuring seamless, secure global trade.",
   },

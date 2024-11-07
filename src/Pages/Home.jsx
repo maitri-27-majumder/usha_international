@@ -7,6 +7,7 @@ import Products from '../components/Home/Product'
 import Reviews from '../components/Home/Reviews'
 import Footer from '../components/Footer'
 import Certifications from '../components/Home/Certifications'
+import Testimonials from '../components/Home/Testimonials'
 
 const Home = () => {
   return (
@@ -14,9 +15,10 @@ const Home = () => {
     <Slider/>
     <AboutUs/>
     <WhyChooseUs/>
-    <Certifications />
     <Products/>
-    <Reviews/>
+    {/* <Reviews/> */}
+    <Testimonials/>
+    <Certifications />
     </>
   )
 }

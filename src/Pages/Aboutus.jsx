@@ -1,42 +1,65 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/About.scss"; // Import the SCSS file
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Aboutus = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Set animation when section enters view
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
   return (
     <div>
       <div className="aboutcontainer">
         <div className="heading">
           Quality Products, Global Reach, Trusted Partnerships
         </div>
+        <div className="aboutfirstsection">
+        <div>
         <div className="paragraph">
-          At Usha International, we are dedicated to delivering premium,
-          carefully sourced products from India's rich heritage to global
-          markets. With a focus on quality, sustainability, and customer
-          satisfaction, we build lasting relationships and offer tailored
-          solutions that meet the unique needs of our clients worldwide.
+          Welcome to Usha International. Thank you for your interest in our
+          company. Founded by visionary entrepreneur Suman Saha, Usha
+          International has emerged as a leading name in the export industry.
+          Driven by a passion for excellence and a commitment to sustainability,
         </div>
-       
+
         <div className="paragraph">
-          Usha International has grown into a leading force in the global export
-          industry. Our company is driven by a commitment to excellence,
-          sustainability, and reliability, offering a diverse range of premium
-          products, including spices, grocery items, dry fruits, honey,
-          mushrooms, handicrafts, furniture, garments, and more.<br></br>
-          <br></br> At Usha International, we take pride in delivering
-          high-quality products to key international markets such as the USA,
-          UK, UAE, and South Africa. Every item we export is carefully sourced,
-          meticulously packed, and handled with precision to ensure it reaches
-          our clients in perfect condition. We value our relationships with our
-          global partners and strive to exceed expectations through tailored
-          solutions and a customer-first approach.<br></br>
-          <br></br> Our unwavering focus on quality and sustainability sets us
-          apart, and our extensive industry experience makes us a trusted
-          partner for businesses around the world. Whether you're looking for
-          agricultural products, artisanal handicrafts, or fashion, Usha
-          International is committed to bringing the best of India to the global
-          stage.
+          we specialize in exporting a wide range of premium products including
+          Spices, Ginger, Tea/Coffee, Garlic, Bay leaves, Turmeric, Garam
+          masala, Natural Honey, Flavored Honey, King Red Chilli, Black
+          Cardamom, Mushrooms, Dry Fruits , Handicrafts etc. Our meticulous
+          approach to packing and handling ensures that every shipment arrives
+          in perfect condition. Exporting to key markets like the USA, UK, UAE,
+          and South Africa, we are committed to reliability, professionalism,
+          and tailored solutions.
+        </div>
+        <div className="paragraph">
+          CHOOSE USHA INTERNATIONAL because - At Usha International, your
+          satisfaction is our top priority, and we go above and beyond to
+          deliver excellence every time. CHOOSE USHA INTERNATIONAL.
+        </div>
+        </div>
+        
+          <img src="public/members/aboutus_2.png"/>
+        
         </div>
       </div>
       <div className="about-container">
@@ -91,6 +114,44 @@ const Aboutus = () => {
               of market trends and continuously improving, we aspire to be the
               preferred partner for businesses seeking reliable, premium
               products.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="why-choose-us-container" ref={sectionRef}>
+        {/* <div className="divider"></div> */}
+        <div className="heading-container">
+          <h2>What We Do</h2>
+        </div>
+        <div className={`boxes-container ${isVisible ? "animate" : ""}`}>
+          <div className={`box ${isVisible ? "animate" : ""}`}>
+            <h3>Export</h3>
+            <p>
+              We are Exporting best quality product around the world, You need
+              best product on time you are at right place.
+            </p>
+          </div>
+          <div className={`box ${isVisible ? "animate" : ""}`}>
+            <h3>Sourcing Agent</h3>
+            <p>
+              We are working as local partner of our foreign client to source
+              best quality product from India as per client requirement and
+              Specification
+            </p>
+          </div>
+          <div className={`box ${isVisible ? "animate" : ""}`}>
+            <h3>Import agent for foreign client</h3>
+            <p>
+              We help foreign company to introduce his best quality product in
+              India and help them to find local partners in India
+            </p>
+          </div>
+          <div className={`box ${isVisible ? "animate" : ""}`}>
+            <h3>Training & consultancy</h3>
+            <p>
+              We are promoting global business, to make it easy we are giving
+              Practical Export import related training for more info visit our
+              website.
             </p>
           </div>
         </div>

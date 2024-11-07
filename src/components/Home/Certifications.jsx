@@ -3,7 +3,10 @@ import "../../styles/Home/Certifications.scss";
 
 const Certifications = () => {
   return (
+    <>
+    <div className="heading">Our Certification</div>
     <div class="infinite-slider">
+      
       <div class="slide-track">
         <div class="slide">
           <img
@@ -215,6 +218,7 @@ const Certifications = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

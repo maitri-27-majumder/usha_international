@@ -84,7 +84,7 @@ const Header = () => {
             <Link to="/sourcing-agent">Sourcing Agent</Link>
           </li>
           <li>
-            <Dropdown menu={{ items }}>
+            <Dropdown className="dropdown" menu={{ items }}>
               <a>Products</a>
             </Dropdown>
           </li>

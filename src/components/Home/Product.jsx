@@ -94,7 +94,7 @@ const Products = () => {
     <>
       <div className="products-container">
         <div className="heading-container">
-          <h2>Our Products</h2>
+          <h2>What We Export</h2>
         </div>
         {products.map((product, index) => (
           <div
