@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Home/Slider.scss";
 import slider1 from "../../assets/slide1.mp4";
-import slider2 from "../../assets/slide2.mov";
+// import slider2 from "../../assets/slide2.mov";
 
 const Slider = () => {
   const duration = [4, 9];
@@ -36,7 +36,7 @@ const Slider = () => {
         )}
         {currentIndex === 1 && (
           <video autoPlay loop muted className="slider-bg">
-            <source src={slider2} type="video/mp4" />
+            <source src={slider1} type="video/mp4" />
           </video>
         )}
         <div className="slide-mask"></div>
