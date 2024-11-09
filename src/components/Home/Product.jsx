@@ -16,11 +16,10 @@ const Products = () => {
       link: "/products/spices",
       iframe: (
         <iframe
-          src="https://lumalabs.ai/embed/36783a60-d040-442d-80f3-b8bca256e225?mode=sparkles&background=%23fcfcfc&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
-          width="374"
-          height="500"
+          src="https://skybox.blockadelabs.com/e/e057b6921a7acff32ee914bfdd1e012a"
+          width="540"
+          height="360"
           frameborder="0"
-          title="luma embed"
         ></iframe>
       ),
     },
@@ -32,11 +31,9 @@ const Products = () => {
       link: "/products/tea",
       iframe: (
         <iframe
-          src="https://lumalabs.ai/embed/36783a60-d040-442d-80f3-b8bca256e225?mode=sparkles&background=%23fcfcfc&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
-          width="374"
-          height="500"
-          frameborder="0"
-          title="luma embed"
+          src="https://skybox.blockadelabs.com/e/854c845c5c5e3ee66401c37ba93747ca"
+          width="540"
+          height="360"
         ></iframe>
       ),
     },
@@ -80,11 +77,10 @@ const Products = () => {
       link: "/products/honey",
       iframe: (
         <iframe
-          src="https://lumalabs.ai/embed/36783a60-d040-442d-80f3-b8bca256e225?mode=sparkles&background=%23fcfcfc&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
-          width="374"
-          height="500"
+          src="https://skybox.blockadelabs.com/e/dc0ceb93fab5c75d54607aff68e29ad1"
+          width="500"
+          height="360"
           frameborder="0"
-          title="luma embed"
         ></iframe>
       ),
     },

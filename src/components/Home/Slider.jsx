@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Home/Slider.scss";
-import slider1 from "../../assets/slider1.png";
-import slider2 from "../../assets/slider2.png";
-import slider3 from "../../assets/slider3.png";
-import slider4 from "../../assets/slider4.png";
+import slider1 from "../../assets/slide1.mp4";
+import slider2 from "../../assets/slide2.mov";
 
 const Slider = () => {
-  const images = [slider1, slider2, slider3, slider4];
+  const duration = [4, 9];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+    setTimeout(() => {
+      setCurrentIndex((currentIndex + 1) % 2);
+    }, 1000 * duration[currentIndex]);
+    // return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
     <div
       className="slider"
-      style={{ backgroundImage: `url(${images[currentIndex]})` }}
+      // style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       <div className="slider-content">
         <h1 className="tagline">
@@ -31,6 +29,17 @@ const Slider = () => {
           Delivering the finest exports with precision, sustainability, and
           passion—trusted worldwide, crafted with care
         </p>
+        {currentIndex === 0 && (
+          <video autoPlay loop muted className="slider-bg">
+            <source src={slider1} type="video/mp4" />
+          </video>
+        )}
+        {currentIndex === 1 && (
+          <video autoPlay loop muted className="slider-bg">
+            <source src={slider2} type="video/mp4" />
+          </video>
+        )}
+        <div className="slide-mask"></div>
       </div>
     </div>
   );

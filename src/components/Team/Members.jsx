@@ -23,6 +23,7 @@ const members = [
     image: "/members/meeta.jpg",
     description:
       "Suvadra saha, as co-founder and senior logistics manager at Usha International with over 7 years of experience in the logistics sector. Suvadra is known for expertise in overseeing complex supply chain operations, optimizing transportation, and ensuring the seamless distribution of Usha International's diverse range of high-quality products, including spices, tea, coffee, handicrafts, and more. With a strategic mindset and a commitment to efficiency, Suvadra has played a key role in enhancing logistics solutions, guaranteeing timely and secure deliveries that uphold the company’s commitment to quality and exceptional packaging.",
+    email: "connect.ushainternational@gmail.com",
   },
   {
     name: "Subir Saha",
@@ -77,11 +78,13 @@ const Members = () => {
             <img src={current.data?.image} alt="" height={340} />
           </div>
           <div className="member-data">
-            {current.data?.name?.split(" ").map((item) => (
-              <div>{item}</div>
-            ))}
+            <div>{current.data?.name}</div>
             <div>{current.data?.designation}</div>
             <div>{current.data?.description}</div>
+            <div>
+              <div>{current.data?.email || "info@international.com"}</div>
+              <div>+919599513207</div>
+            </div>
           </div>
         </Drawer>
       )}

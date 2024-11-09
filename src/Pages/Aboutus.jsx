@@ -27,39 +27,40 @@ const Aboutus = () => {
     };
   }, []);
   return (
-    <div>
+    <>
       <div className="aboutcontainer">
         <div className="heading">
           Quality Products, Global Reach, Trusted Partnerships
         </div>
         <div className="aboutfirstsection">
-        <div>
-        <div className="paragraph">
-          Welcome to Usha International. Thank you for your interest in our
-          company. Founded by visionary entrepreneur Suman Saha, Usha
-          International has emerged as a leading name in the export industry.
-          Driven by a passion for excellence and a commitment to sustainability,
-        </div>
+          <div>
+            <div className="paragraph">
+              Welcome to Usha International. Thank you for your interest in our
+              company. Founded by visionary entrepreneur Suman Saha, Usha
+              International has emerged as a leading name in the export
+              industry. Driven by a passion for excellence and a commitment to
+              sustainability,
+            </div>
 
-        <div className="paragraph">
-          we specialize in exporting a wide range of premium products including
-          Spices, Ginger, Tea/Coffee, Garlic, Bay leaves, Turmeric, Garam
-          masala, Natural Honey, Flavored Honey, King Red Chilli, Black
-          Cardamom, Mushrooms, Dry Fruits , Handicrafts etc. Our meticulous
-          approach to packing and handling ensures that every shipment arrives
-          in perfect condition. Exporting to key markets like the USA, UK, UAE,
-          and South Africa, we are committed to reliability, professionalism,
-          and tailored solutions.
-        </div>
-        <div className="paragraph">
-          CHOOSE USHA INTERNATIONAL because - At Usha International, your
-          satisfaction is our top priority, and we go above and beyond to
-          deliver excellence every time. CHOOSE USHA INTERNATIONAL.
-        </div>
-        </div>
-        
-          <img src="public/members/aboutus_2.png"/>
-        
+            <div className="paragraph">
+              we specialize in exporting a wide range of premium products
+              including Spices, Ginger, Tea/Coffee, Garlic, Bay leaves,
+              Turmeric, Garam masala, Natural Honey, Flavored Honey, King Red
+              Chilli, Black Cardamom, Mushrooms, Dry Fruits , Handicrafts etc.
+              Our meticulous approach to packing and handling ensures that every
+              shipment arrives in perfect condition. Exporting to key markets
+              like the USA, UK, UAE, and South Africa, we are committed to
+              reliability, professionalism, and tailored solutions.
+            </div>
+            <div className="paragraph">
+              CHOOSE USHA INTERNATIONAL because - At Usha International, your
+              satisfaction is our top priority, and we go above and beyond to
+              deliver excellence every time. CHOOSE USHA INTERNATIONAL.
+            </div>
+          </div>
+          <div>
+            <img src="public/members/aboutus_2.png" />
+          </div>
         </div>
       </div>
       <div className="about-container">
@@ -118,7 +119,11 @@ const Aboutus = () => {
           </div>
         </div>
       </div>
-      <div className="why-choose-us-container" ref={sectionRef}>
+      <div
+        className="why-choose-us-container"
+        ref={sectionRef}
+        style={{ backgroundColor: "#f4f3f2" }}
+      >
         {/* <div className="divider"></div> */}
         <div className="heading-container">
           <h2>What We Do</h2>
@@ -156,7 +161,7 @@ const Aboutus = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

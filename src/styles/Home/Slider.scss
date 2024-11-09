@@ -11,6 +11,24 @@
   align-items: center;
   position: relative;
   transition: background-image 0.8s ease-in-out;
+  overflow-y: hidden;
+  .slider-bg {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    top: -40px;
+    left: 0;
+  }
+  .slide-mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+  }
 
   .slider-content {
     text-align: center;

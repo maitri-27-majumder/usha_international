@@ -1,66 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Header.scss";
-import Logo from "../assets/ushaLogo.png";
+// import Logo from "../assets/ushaLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { Dropdown } from "antd";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [selected, setSelected] = useState(1);
 
   const items = [
     {
-      key: '1',
+      key: "1",
       label: (
         <Link to="/products/tea">
-          Tea
+          <span className={selected === 1 ? "route-active" : ""}>Tea</span>
         </Link>
       ),
     },
     {
-      key: '1',
+      key: "2",
       label: (
         <Link to="/products/spices">
-          Spices
+          <span className={selected === 2 ? "route-active" : ""}>Spices</span>
         </Link>
       ),
     },
     {
-      key: '1',
+      key: "3",
       label: (
         <Link to="/products/handicrafts">
-          Handicrafts
+          <span className={selected === 3 ? "route-active" : ""}>
+            Handicrafts
+          </span>
         </Link>
       ),
     },
     {
-      key: '1',
+      key: "4",
       label: (
         <Link to="/products/furniture">
-          Furniture
+          <span className={selected === 4 ? "route-active" : ""}>
+            Furniture
+          </span>
         </Link>
       ),
     },
     {
-      key: '1',
+      key: "5",
       label: (
         <Link to="/products/honey">
-          Honey
+          <span className={selected === 5 ? "route-active" : ""}>Honey</span>
         </Link>
       ),
     },
     {
-      key: '1',
+      key: "6",
       label: (
         <Link to="/products/mushroom">
-          Mushroom
+          <span className={selected === 6 ? "route-active" : ""}>Mushroom</span>
         </Link>
       ),
     },
     {
-      key: '1',
+      key: "7",
       label: (
         <Link to="/products/textile">
-          Textile
+          <span className={selected === 7 ? "route-active" : ""}>Textile</span>
         </Link>
       ),
     },
@@ -69,9 +74,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src={Logo} alt="Logo" />
+        <img src="/logo-img.PNG" alt="Logo" width={50} />
+        <img src="/logo-text.png" alt="Logo" width={120} />
       </div>
-
       <nav className="nav">
         <ul>
           <li>
@@ -84,7 +89,16 @@ const Header = () => {
             <Link to="/sourcing-agent">Sourcing Agent</Link>
           </li>
           <li>
-            <Dropdown className="dropdown" menu={{ items }}>
+            <Dropdown
+              className="dropdown"
+              menu={{
+                items,
+                // selectable: true,
+                onClick: ({ key }) => {
+                  setSelected(key);
+                },
+              }}
+            >
               <a>Products</a>
             </Dropdown>
           </li>

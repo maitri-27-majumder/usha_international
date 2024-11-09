@@ -1,4 +1,3 @@
-
 .members-wrapper {
   display: flex;
   gap: 10px;
@@ -60,7 +59,7 @@
     // color: aliceblue;
     padding: 40px 0 60px;
     > div {
-        padding: 0 20px;
+      padding: 0 20px;
       &:first-child {
         font-size: 24px;
         font-weight: 700;
@@ -74,14 +73,21 @@
   }
 }
 .member-info-drawer {
-    background-color: rgb(255, 249, 242) !important;
-    img {
-        border-radius: 10px;
-    }
+  background-color: rgb(255, 249, 242) !important;
+  > .ant-drawer-body {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    border-radius: 10px;
+  }
   .member-data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     font-family: "Playfair Display", serif;
     text-align: justify;
-    
+
     > div {
       &:first-child {
         color: #1f493d;
@@ -92,16 +98,16 @@
         padding-left: 20px;
         text-transform: uppercase;
       }
+      // &:nth-child(2) {
+      //   color: #1f493d;
+      //   font-size: 32px;
+      //   font-weight: 900;
+      //   padding-bottom: 10px;
+      //   border-left: 2px solid #1f493d;
+      //   padding-left: 20px;
+      //   text-transform: uppercase;
+      // }
       &:nth-child(2) {
-        color: #1f493d;
-        font-size: 32px;
-        font-weight: 900;
-        padding-bottom: 10px;
-        border-left: 2px solid #1f493d;
-        padding-left: 20px;
-        text-transform: uppercase;
-      }
-      &:nth-child(3) {
         font-size: 22px;
         padding-bottom: 10px;
         margin-bottom: 20px;
@@ -109,9 +115,18 @@
         border-left: 2px solid #1f493d;
         padding-left: 20px;
       }
-      &:last-child {
+      &:nth-child(3) {
         font-size: 16px;
         color: rgb(61, 61, 61);
+      }
+      &:nth-child(4) {
+        margin-top: 20px;
+        font-size: 16px;
+        color: rgb(61, 61, 61);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
       }
     }
   }

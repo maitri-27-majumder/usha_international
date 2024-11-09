@@ -53,7 +53,7 @@ const AboutUs = () => {
           superior quality. Join us in celebrating tradition and craftsmanship
           with every purchase!
         </p>
-        <a href="/aboutus" className="learn-more">
+        <a href="/about-us" className="learn-more">
           Learn More
         </a>
       </div>
