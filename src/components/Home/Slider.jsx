@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Home/Slider.scss";
 import slider1 from "../../assets/slide1.mp4";
-import slider2 from "../../assets/largeslide.mov";
+import slider2 from "../../assets/movie.mov";
 
 const Slider = () => {
   const duration = [4, 9];
