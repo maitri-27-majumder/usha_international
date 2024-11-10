@@ -64,18 +64,18 @@
         line-height: 1.5;
         margin-bottom: 2rem;
       }
-      .learn-more-link{
+      .learn-more-link {
         font-size: 1.1rem;
         text-decoration: none;
-        color:#1f493d;
+        color: #1f493d;
         position: relative;
         cursor: pointer;
         transition: color 0.3s ease;
         font-family: "Playfair Display", serif;
         font-weight: 600;
-  
+
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 2px;
@@ -86,11 +86,11 @@
           transform: scaleX(0);
           transform-origin: right;
         }
-  
+
         &:hover {
           color: #1f493d;
         }
-  
+
         &:hover::after {
           transform: scaleX(1);
           transform-origin: left;
@@ -126,22 +126,53 @@
       flex-direction: row-reverse; /* Reverse layout: image on left, content on right */
       text-align: right;
     }
-  }
+    @media (max-width: 1024px) {
+      gap: 50px; /* Reduce the gap between content and image */
+    }
 
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .product-item {
-      flex-direction: column; /* Stack content and image vertically on smaller screens */
-
-      .content {
-        text-align: center;
-      }
+    @media (max-width: 768px) {
+      flex-direction: column !important; /* Stack content and image vertically */
+      align-items: center; /* Center align items */
+      text-align: center !important; /* Center text for smaller screens */
 
       .image {
-        img {
-          max-width: 100%;
-        }
+        margin-bottom: 2rem; /* Add some space between image and text */
+      }
+      iframe {
+        width: 360px;
+        height: 240px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content h3 {
+        font-size: 1.2rem; /* Make the heading smaller */
+      }
+
+      .content p {
+        font-size: 0.9rem; /* Make the description smaller */
+      }
+
+      .learn-more-link {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
       }
     }
   }
+
+  /* Responsive adjustments */
+  // @media (max-width: 1024px) {
+  //   .product-item {
+  //     flex-direction: column; /* Stack content and image vertically on smaller screens */
+
+  //     .content {
+  //       text-align: center;
+  //     }
+
+  //     .image {
+  //       img {
+  //         max-width: 100%;
+  //       }
+  //     }
+  //   }
+  // }
 }

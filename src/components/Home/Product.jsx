@@ -78,7 +78,7 @@ const Products = () => {
       iframe: (
         <iframe
           src="https://skybox.blockadelabs.com/e/dc0ceb93fab5c75d54607aff68e29ad1"
-          width="500"
+          width="540"
           height="360"
           frameborder="0"
         ></iframe>

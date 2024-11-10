@@ -63,7 +63,7 @@ const Members = () => {
       ))}
       {current.isOpen && (
         <Drawer
-          closable={false}
+          // closable={false}
           open={current.isOpen}
           onClose={() => {
             setCurrent({

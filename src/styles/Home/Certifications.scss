@@ -12,16 +12,16 @@
 .slide-track {
   animation: scroll 20s linear infinite;
   display: flex;
-  .slide{
+  .slide {
     padding: 15px 50px;
   }
 }
 .infinite-slider {
-    overflow-x: hidden;
-    padding: 10px;
-    background-color: #FFF;
+  overflow-x: hidden;
+  padding: 10px;
+  background-color: #fff;
 }
-.heading{
+.heading {
   font-family: "Playfair Display", serif;
   position: relative;
   font-size: 38px;
@@ -36,5 +36,102 @@
     bottom: -5px;
     left: 46%;
     border-bottom: 2px solid #1f493d;
+  }
+}
+
+@media (max-width: 1024px) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-220px * 13));
+    }
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .heading::after {
+    width: 70px;
+    left: 47%;
+  }
+
+  .infinite-slider {
+    padding: 8px;
+  }
+
+  .slide img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .slide-track {
+    animation: scroll 25s linear infinite; /* Slows down the animation slightly */
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 13));
+    }
+  }
+  .heading {
+    font-size: 28px;
+  }
+
+  .heading::after {
+    width: 60px;
+    left: 45%;
+  }
+
+  .infinite-slider {
+    padding: 6px;
+  }
+
+  .slide img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .slide-track {
+    animation: scroll 30s linear infinite; /* Slows down animation further for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-180px * 13));
+    }
+  }
+  .heading {
+    font-size: 24px;
+  }
+
+  .heading::after {
+    width: 50px;
+    left: 44%;
+  }
+
+  .infinite-slider {
+    padding: 4px;
+  }
+
+  .slide img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .slide-track {
+    animation: scroll 35s linear infinite; /* Further slows down animation for smoother effect on small screens */
   }
 }

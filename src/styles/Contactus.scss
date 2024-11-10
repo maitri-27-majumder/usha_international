@@ -79,8 +79,8 @@
 
       button[type="submit"],
       input[type="submit"] {
-        background:  #b8d0b5;
-        color:#333;
+        background: #b8d0b5;
+        color: #333;
         border: none;
         margin-top: 40px;
         padding: 20px;
@@ -125,7 +125,7 @@
       button[type="button"] {
         display: block;
         appearance: none;
-        background:  #b8d0b5;
+        background: #b8d0b5;
         color: black;
         border: none;
         text-transform: uppercase;
@@ -141,7 +141,7 @@
         display: block;
         appearance: none;
         margin-top: 40px;
-        border: 1px solid  #b8d0b5;
+        border: 1px solid #b8d0b5;
         margin-bottom: 20px;
         text-transform: uppercase;
         padding: 10px 20px;
@@ -270,7 +270,7 @@
   z-index: -1;
   width: 100%;
 
-  background-image: url('/public/Contactus_banner.png');
+  background-image: url("/public/Contactus_banner.png");
   height: 300px;
   text-align: center;
   img {
@@ -289,5 +289,54 @@
     // position: absolute;
     // top: 50%;
     // left: 20%;
+  }
+}
+@media (max-width: 1200px) {
+  .sectionwrapper {
+    padding: 60px 10vw 30px;
+    margin-top: 320px;
+  }
+
+  .contentwrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form {
+    width: auto !important;
+  }
+
+  .cardtwrapper {
+    width: 100% !important;
+    flex-direction: column;
+  }
+
+  .carditem {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .worldwrapper {
+    padding: 0 40px;
+  }
+
+  .banner {
+    padding-top: 60px;
+    height: 250px;
+    p {
+      padding: 0 20px;
+    }
+  }
+
+  .sectionheading {
+    font-size: 36px;
+  }
+
+  .carditemheading {
+    font-size: 1.8rem;
+  }
+
+  .carditemcontent .carditempara {
+    font-size: 13px;
   }
 }
