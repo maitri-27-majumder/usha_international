@@ -4,8 +4,6 @@ import facebook from "../assets/Facebook.png";
 import insta from "../assets/Instagram.png";
 import linkedin from "../assets/LinkedIN.png";
 import Logow from "../assets/logowhite.png";
-import mail from "../assets/mail.png";
-import call from "../assets/call.png";
 
 const Footer = () => {
   return (
