@@ -14,13 +14,9 @@
   .slider-bg {
     position: absolute;
     z-index: -100;
+    width: 100%;
     top: -40px;
     left: 0;
-    width: 100%;
-    video {
-      width: 100%;
-      // height: 100%;
-    }
   }
   .slide-mask {
     height: 100%;
@@ -117,12 +113,10 @@
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video fills the slider area without distortion */
       z-index: -100;
-      video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures the video fills the slider area without distortion */
-      }
     }
 
     .slider-content {
