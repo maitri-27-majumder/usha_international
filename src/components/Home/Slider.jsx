@@ -30,7 +30,7 @@ const Slider = () => {
         <h1 className="tagline">We Deliver Premium Indian Products Globally</h1>
         <p className="sub-tagline">Your requirements are our priority</p>
         {/* {currentIndex === 0 && ( */}
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -40,7 +40,7 @@ const Slider = () => {
           ref={videoRef}
         >
           <source src={videoSrc} type="video/webm" />
-        </video>
+        </video> */}
         {/* )} */}
         {/* {currentIndex === 1 && (
         <video
