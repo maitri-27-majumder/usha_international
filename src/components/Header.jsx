@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/Header.scss";
 // import Logo from "../assets/ushaLogo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -17,7 +17,9 @@ const Header = () => {
       label: (
         <Link
           to="/products/tea"
-          className={location?.pathname.includes("tea") ? "route-active" : ""}
+          className={
+            location?.pathname.includes("tea") ? "route-active" : "menu-item"
+          }
         >
           Tea
         </Link>
@@ -29,7 +31,7 @@ const Header = () => {
         <Link
           to="/products/spices"
           className={
-            location?.pathname.includes("spices") ? "route-active" : ""
+            location?.pathname.includes("spices") ? "route-active" : "menu-item"
           }
         >
           Spices
@@ -42,7 +44,9 @@ const Header = () => {
         <Link
           to="/products/handicrafts"
           className={
-            location?.pathname.includes("handicrafts") ? "route-active" : ""
+            location?.pathname.includes("handicrafts")
+              ? "route-active"
+              : "menu-item"
           }
         >
           Handicrafts
@@ -55,7 +59,9 @@ const Header = () => {
         <Link
           to="/products/furniture"
           className={
-            location?.pathname.includes("furniture") ? "route-active" : ""
+            location?.pathname.includes("furniture")
+              ? "route-active"
+              : "menu-item"
           }
         >
           Furniture
@@ -67,7 +73,9 @@ const Header = () => {
       label: (
         <Link
           to="/products/honey"
-          className={location?.pathname.includes("honey") ? "route-active" : ""}
+          className={
+            location?.pathname.includes("honey") ? "route-active" : "menu-item"
+          }
         >
           Honey
         </Link>
@@ -79,7 +87,9 @@ const Header = () => {
         <Link
           to="/products/mushroom"
           className={
-            location?.pathname.includes("mushroom") ? "route-active" : ""
+            location?.pathname.includes("mushroom")
+              ? "route-active"
+              : "menu-item"
           }
         >
           Mushroom
@@ -92,7 +102,9 @@ const Header = () => {
         <Link
           to="/products/textile"
           className={
-            location?.pathname.includes("textile") ? "route-active" : ""
+            location?.pathname.includes("textile")
+              ? "route-active"
+              : "menu-item"
           }
         >
           Textile
@@ -101,10 +113,35 @@ const Header = () => {
     },
   ];
   const [isOpen, setIsOpen] = useState(false);
+  const drawerRef = useRef(null);
 
-  const toggleDrawer = () => {
-    setIsOpen(!isOpen);
+  const openDrawer = () => {
+    setIsOpen(true);
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target) &&
+        !event.target.classList.contains("menu-item")
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    // Add event listener when the drawer is open
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    // Clean up the event listener on component unmount or when isOpen changes
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -114,11 +151,13 @@ const Header = () => {
             <img src="/logo-img.PNG" alt="Logo" width={50} />
             <img src="/logo-text.png" alt="Logo" width={150} />
           </div>
-          <CiMenuBurger className="hamburger" onClick={toggleDrawer} />
+          {!isOpen && (
+            <CiMenuBurger className="hamburger" onClick={openDrawer} />
+          )}
         </div>
 
         {isOpen && (
-          <>
+          <div ref={drawerRef}>
             <nav className="nav">
               <ul>
                 <li>
@@ -158,7 +197,7 @@ const Header = () => {
                 Contact Us
               </button>
             </div>
-          </>
+          </div>
         )}
         <nav className="desktop-nav">
           <ul>

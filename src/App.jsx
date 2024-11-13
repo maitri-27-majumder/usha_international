@@ -2,7 +2,7 @@ import "./App.css";
 
 import "./App.css";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Aboutus from "./Pages/Aboutus";
@@ -17,7 +17,7 @@ import SourcingAgentPage from "./Pages/SourcingAgentPage";
 // import blacktea from './assets/blacktea.png';
 import Home from "./Pages/Home";
 import Team from "./Pages/Team";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 // const mainProduct = {
 //   id: 1,
@@ -54,6 +54,11 @@ import { Outlet } from "react-router-dom";
 //   // Add more sub-products as needed
 // ];
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div>
       <Header />

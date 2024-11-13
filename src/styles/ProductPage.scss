@@ -263,6 +263,7 @@
 
   .main-product-info p {
     font-size: 1.1rem;
+    padding: 20px;
   }
 
   .main-product-image img {
@@ -288,6 +289,14 @@
     gap: 20px;
     .sub-product-info {
       padding: 0 !important;
+    }
+    &.right-image {
+      .sub-product-image {
+        order: 1 !important;
+      }
+      .sub-product-info {
+        order: 2 !important;
+      }
     }
   }
 

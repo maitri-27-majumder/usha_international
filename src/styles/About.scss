@@ -139,6 +139,7 @@ $background-color: #f4f3f2;
   .aboutcontainer {
     padding: 100px 30px;
     margin-top: 60px;
+    align-items: center;
   }
 
   .heading {
@@ -173,6 +174,7 @@ $background-color: #f4f3f2;
   .about-left {
     gap: 10px;
     width: 100%; /* Take up full width */
+    justify-content: center;
   }
 
   .about-left-upper,

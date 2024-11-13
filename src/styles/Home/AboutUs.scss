@@ -132,7 +132,7 @@
 //   }
 // }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .about_heading {
     font-size: 28px;
     margin-top: 10px;
@@ -144,12 +144,13 @@
 
   .about-us-container {
     flex-direction: column;
+    align-items: center;
     gap: 30px;
     padding: 2rem;
 
     .image-container {
       padding-left: 0;
-      width: 100%;
+      // width: 100%;
       transform: translateX(0); /* Start in view on smaller screens */
 
       img {
