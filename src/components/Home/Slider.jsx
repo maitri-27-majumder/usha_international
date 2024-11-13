@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Home/Slider.scss";
 import slider1 from "../../assets/slide1.mp4";
-import slider2 from "../../assets/slide2.mov";
+import slider2 from "../../assets/slide2.mp4";
 
 const Slider = () => {
   const duration = [4, 9];
@@ -25,12 +25,28 @@ const Slider = () => {
         <h1 className="tagline">We Deliver Premium Indian Products Globally</h1>
         <p className="sub-tagline">Your requirements are our priority</p>
         {currentIndex === 0 && (
-          <video autoPlay loop muted disablepictureinpicture playsinline webkit-playsinline className="slider-bg">
+          <video
+            autoPlay
+            loop
+            muted
+            disablepictureinpicture
+            playsinline
+            webkit-playsinline
+            className="slider-bg"
+          >
             <source src={slider1} type="video/mp4" />
           </video>
         )}
         {currentIndex === 1 && (
-          <video autoPlay loop muted disablepictureinpicture playsinline webkit-playsinline className="slider-bg">
+          <video
+            autoPlay
+            loop
+            muted
+            disablepictureinpicture
+            playsinline
+            webkit-playsinline
+            className="slider-bg"
+          >
             <source src={slider2} type="video/mp4" />
           </video>
         )}
