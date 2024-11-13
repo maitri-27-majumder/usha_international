@@ -77,7 +77,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="testimonials-section">
-      <h2 className="section-heading">Hear from Our Customers</h2>
+      <h2 className="section-heading">Love From Clients</h2>
       <div className="scrolling-content">
         <div className="testimonials-container">
           {/* Loop through testimonials twice to create an infinite loop effect */}
