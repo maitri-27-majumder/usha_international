@@ -30,17 +30,18 @@ const Slider = () => {
         <h1 className="tagline">We Deliver Premium Indian Products Globally</h1>
         <p className="sub-tagline">Your requirements are our priority</p>
         {/* {currentIndex === 0 && ( */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline={true}
-          webkit-playsinline="true"
-          className="slider-bg"
-          ref={videoRef}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+        <div className="slider-bg">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline={true}
+            webkit-playsinline="true"
+            ref={videoRef}
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        </div>
         {/* )} */}
         {/* {currentIndex === 1 && (
         <video
