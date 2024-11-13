@@ -3,10 +3,10 @@ import "../../styles/Home/Slider.scss";
 
 const Slider = () => {
   const duration = [9, 4];
-  const slides = ["/slide2.mp4", "/slide1.mp4"];
+  const slides = ["/slide2.webm", "/slide1.webm"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [videoSrc, setVideoSrc] = useState("/slide2.mp4");
+  const [videoSrc, setVideoSrc] = useState("/slide2.webm");
   const videoRef = useRef();
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Slider = () => {
           className="slider-bg"
           ref={videoRef}
         >
-          <source src={videoSrc} type="video/mp4" />
+          <source src={videoSrc} type="video/webm" />
         </video>
         {/* )} */}
         {/* {currentIndex === 1 && (
