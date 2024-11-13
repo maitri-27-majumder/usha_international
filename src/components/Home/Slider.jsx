@@ -29,9 +29,8 @@ const Slider = () => {
             autoPlay
             loop
             muted
-            disablepictureinpicture
-            playsinline
-            webkit-playsinline
+            playsInline={true}
+            webkit-playsinline="true"
             className="slider-bg"
           >
             <source src={slider1} type="video/mp4" />
@@ -42,9 +41,8 @@ const Slider = () => {
             autoPlay
             loop
             muted
-            disablepictureinpicture
-            playsinline
-            webkit-playsinline
+            playsinline={true}
+            webkit-playsinline="true"
             className="slider-bg"
           >
             <source src={slider2} type="video/mp4" />

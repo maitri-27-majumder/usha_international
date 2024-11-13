@@ -19,7 +19,7 @@ const Products = () => {
           src="https://skybox.blockadelabs.com/e/e057b6921a7acff32ee914bfdd1e012a"
           width="540"
           height="360"
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
       ),
     },
@@ -48,7 +48,7 @@ const Products = () => {
           src="https://lumalabs.ai/embed/0c2354fd-8e6a-402e-9c3c-40b3890b74b5?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
           width="540"
           height="360"
-          frameborder="0"
+          frameBorder="0"
           title="luma embed"
         ></iframe>
       ),
@@ -64,7 +64,7 @@ const Products = () => {
           src="https://lumalabs.ai/embed/6a1b0c89-15c1-4c7e-a708-7c6e4e2b5e54?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
           width="540"
           height="360"
-          frameborder="0"
+          frameBorder="0"
           title="luma embed"
         ></iframe>
       ),
@@ -80,7 +80,7 @@ const Products = () => {
           src="https://skybox.blockadelabs.com/e/dc0ceb93fab5c75d54607aff68e29ad1"
           width="540"
           height="360"
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
       ),
     },
