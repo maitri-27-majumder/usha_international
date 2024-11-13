@@ -3,16 +3,14 @@ import { useForm } from "react-hook-form";
 import "../styles/Contactus.scss";
 import office from "../assets/office.png";
 import flag from "../assets/flag.png";
-import contact from "../assets/contactUs.png";
-import call from "../assets/call.png";
+import contact from "../assets/ContactUs.png";
+import call from "../assets/Call.png";
 import mail from "../assets/mail.png";
 import social from "../assets/SocialMedia.png";
 import facebook from "../assets/Facebook.png";
 import insta from "../assets/Instagram.png";
 import linkedin from "../assets/LinkedIN.png";
 import map from "../assets/map.png";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const Contactus = () => {
   const {
