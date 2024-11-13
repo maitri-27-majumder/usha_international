@@ -126,7 +126,7 @@
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     align-items: flex-start;
     width: 98%;
   }
@@ -139,7 +139,12 @@
   }
 
   .logo img {
-    width: 40px;
+    &:first-child {
+      width: 30px;
+    }
+    &:last-child {
+      width: 100px;
+    }
   }
 
   .header-logo {

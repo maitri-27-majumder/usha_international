@@ -26,7 +26,6 @@
   padding: 4rem;
   overflow: hidden; /* Prevents content overflow during animation */
   position: relative;
-  
 
   .image-container,
   .text-container {
@@ -164,7 +163,7 @@
       padding-right: 0;
       width: 100%;
       transform: translateX(0); /* Start in view on smaller screens */
-
+      text-align: center;
       .bold-text {
         font-size: 1.1rem;
         margin-bottom: 1rem;
@@ -174,13 +173,13 @@
       p {
         font-size: 0.95rem;
         line-height: 1.5;
-        text-align: justify;
+        text-align: center;
       }
 
       .learn-more {
         font-size: 1rem;
         text-align: center;
-        display: block;
+        // display: block;
         margin: 1rem auto;
       }
     }
