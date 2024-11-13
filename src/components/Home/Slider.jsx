@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../styles/Home/Slider.scss";
 
 const Slider = () => {
@@ -6,13 +6,20 @@ const Slider = () => {
   const slides = ["/slide1.mp4", "/slide2.mp4"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [videoSrc, setVideoSrc] = useState("/slide1.mp4");
+  const videoRef = useRef();
 
   useEffect(() => {
     setTimeout(() => {
       setCurrentIndex((currentIndex + 1) % 2);
     }, 1000 * duration[currentIndex]);
     // return () => clearInterval(interval);
+    setVideoSrc(slides[currentIndex]);
   }, [currentIndex]);
+
+  useEffect(() => {
+    videoRef.current?.load();
+  }, [videoSrc]);
 
   return (
     <div
@@ -30,8 +37,9 @@ const Slider = () => {
           playsInline={true}
           webkit-playsinline="true"
           className="slider-bg"
+          ref={videoRef}
         >
-          <source src={slides[currentIndex]} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
         {/* )} */}
         {/* {currentIndex === 1 && (
