@@ -19,10 +19,10 @@ import turmeric from '../assets/products/Turmeric.png';
 import redchilli from '../assets/products/Redchili.png';
 import ginger from '../assets/products/Ginger.png';
 import cuminpowder from '../assets/products/Cuminpowder.png';
-import cinnamonpowder from '../assets/products/CinnamonPowder.png';
-import blackpepper from '../assets/products/BlackPepper.png';
+import cinnamonpowder from '../assets/products/Cinnamonpowder.png';
+import blackpepper from '../assets/products/Blackpepper.png';
 import peppercorns from '../assets/products/Peppercorns.png';
-import mustardseed from '../assets/products/MustardSeed.png';
+import mustardseed from '../assets/products/mustardseed.png';
 
 import woodenhandicrafts from '../assets/products/WoodenHandicrafts.png';
 import bamboohandicrafts from '../assets/products/BambooHandicrafts.png';
