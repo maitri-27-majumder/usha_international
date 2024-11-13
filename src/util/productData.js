@@ -18,7 +18,7 @@ import flavouredtea from '../assets/products/Flavouredtea.png';
 import turmeric from '../assets/products/Turmeric.png';
 import redchilli from '../assets/products/Redchili.png';
 import ginger from '../assets/products/Ginger.png';
-import cuminpowder from '../assets/products/CuminPowder.png';
+import cuminpowder from '../assets/products/Cuminpowder.png';
 import cinnamonpowder from '../assets/products/CinnamonPowder.png';
 import blackpepper from '../assets/products/BlackPepper.png';
 import peppercorns from '../assets/products/Peppercorns.png';
