@@ -8,35 +8,35 @@ import honey from "../../assets/honey.png";
 
 const Products = () => {
   const products = [
-    {
-      name: "Spices: Flavorful Heritage",
-      description:
-        "Unlock the vibrant and rich flavors of India with our premium spice collection. Each spice is carefully sourced and handpicked to bring out the best in your culinary creations. From bold chili powders to aromatic cardamoms, our spices are perfect for elevating any dish to new heights of taste and authenticity.",
-      image: spices, // Update the path as per your image location
-      link: "/products/spices",
-      iframe: (
-        <iframe
-          src="https://skybox.blockadelabs.com/e/e057b6921a7acff32ee914bfdd1e012a"
-          width="540"
-          height="360"
-          frameBorder="0"
-        ></iframe>
-      ),
-    },
-    {
-      name: "Tea: A Sip of Tradition",
-      description:
-        "Indulge in the soothing experience of our finest teas, sourced from renowned plantations. Every sip reflects the tradition and care put into crafting each blend. From robust black teas to delicate greens, our collection offers a delightful escape into the world of refreshing and aromatic flavors.",
-      image: tea,
-      link: "/products/tea",
-      iframe: (
-        <iframe
-          src="https://skybox.blockadelabs.com/e/854c845c5c5e3ee66401c37ba93747ca"
-          width="540"
-          height="360"
-        ></iframe>
-      ),
-    },
+    // {
+    //   name: "Spices: Flavorful Heritage",
+    //   description:
+    //     "Unlock the vibrant and rich flavors of India with our premium spice collection. Each spice is carefully sourced and handpicked to bring out the best in your culinary creations. From bold chili powders to aromatic cardamoms, our spices are perfect for elevating any dish to new heights of taste and authenticity.",
+    //   image: spices, // Update the path as per your image location
+    //   link: "/products/spices",
+    //   iframe: (
+    //     <iframe
+    //       src="https://skybox.blockadelabs.com/e/e057b6921a7acff32ee914bfdd1e012a"
+    //       width="540"
+    //       height="360"
+    //       frameBorder="0"
+    //     ></iframe>
+    //   ),
+    // },
+    // {
+    //   name: "Tea: A Sip of Tradition",
+    //   description:
+    //     "Indulge in the soothing experience of our finest teas, sourced from renowned plantations. Every sip reflects the tradition and care put into crafting each blend. From robust black teas to delicate greens, our collection offers a delightful escape into the world of refreshing and aromatic flavors.",
+    //   image: tea,
+    //   link: "/products/tea",
+    //   iframe: (
+    //     <iframe
+    //       src="https://skybox.blockadelabs.com/e/854c845c5c5e3ee66401c37ba93747ca"
+    //       width="540"
+    //       height="360"
+    //     ></iframe>
+    //   ),
+    // },
     {
       name: "Handicrafts: Artistry in Every Detail",
       description:
@@ -69,21 +69,21 @@ const Products = () => {
         ></iframe>
       ),
     },
-    {
-      name: "Honey: Pure, Natural Sweetness",
-      description:
-        "Our range of premium dry fruits, including almonds, cashews, and raisins, delivers a healthy snack option. Carefully selected and packaged, they provide freshness and natural goodness in every bite",
-      image: honey,
-      link: "/products/honey",
-      iframe: (
-        <iframe
-          src="https://skybox.blockadelabs.com/e/dc0ceb93fab5c75d54607aff68e29ad1"
-          width="540"
-          height="360"
-          frameBorder="0"
-        ></iframe>
-      ),
-    },
+    // {
+    //   name: "Honey: Pure, Natural Sweetness",
+    //   description:
+    //     "Our range of premium dry fruits, including almonds, cashews, and raisins, delivers a healthy snack option. Carefully selected and packaged, they provide freshness and natural goodness in every bite",
+    //   image: honey,
+    //   link: "/products/honey",
+    //   iframe: (
+    //     <iframe
+    //       src="https://skybox.blockadelabs.com/e/dc0ceb93fab5c75d54607aff68e29ad1"
+    //       width="540"
+    //       height="360"
+    //       frameBorder="0"
+    //     ></iframe>
+    //   ),
+    // },
   ];
 
   return (
