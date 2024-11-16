@@ -5,24 +5,37 @@ import tea from "../../assets/tea.png";
 import handicrafts from "../../assets/handicrafts.png";
 import furniture from "../../assets/furniture.png";
 import honey from "../../assets/honey.png";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Products = () => {
+  function Model({ path, position }) {
+    const { scene } = useGLTF(path);
+    return <primitive object={scene} scale={8} position={position} />;
+  }
   const products = [
-    // {
-    //   name: "Spices: Flavorful Heritage",
-    //   description:
-    //     "Unlock the vibrant and rich flavors of India with our premium spice collection. Each spice is carefully sourced and handpicked to bring out the best in your culinary creations. From bold chili powders to aromatic cardamoms, our spices are perfect for elevating any dish to new heights of taste and authenticity.",
-    //   image: spices, // Update the path as per your image location
-    //   link: "/products/spices",
-    //   iframe: (
-    //     <iframe
-    //       src="https://skybox.blockadelabs.com/e/e057b6921a7acff32ee914bfdd1e012a"
-    //       width="540"
-    //       height="360"
-    //       frameBorder="0"
-    //     ></iframe>
-    //   ),
-    // },
+    {
+      name: "Spices: Flavorful Heritage",
+      description:
+        "Unlock the vibrant and rich flavors of India with our premium spice collection. Each spice is carefully sourced and handpicked to bring out the best in your culinary creations. From bold chili powders to aromatic cardamoms, our spices are perfect for elevating any dish to new heights of taste and authenticity.",
+      image: spices, // Update the path as per your image location
+      link: "/products/spices",
+      iframe: (
+        <div className="canvas-container">
+          <Canvas camera={{ position: [2, 5, 5], fov: 50 }} style={{ width: "100%", height: "100%" }}>
+          <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 10]} intensity={2} />
+            <directionalLight position={[-10, -10, -10]} intensity={1} />
+            <OrbitControls
+              minDistance={4}
+              maxDistance={7}
+              enablePan={false}
+            />
+            <Model path={"/handicraft.glb"} position={[0, -2, 0]} />
+          </Canvas>
+        </div>
+      ),
+    },
     // {
     //   name: "Tea: A Sip of Tradition",
     //   description:

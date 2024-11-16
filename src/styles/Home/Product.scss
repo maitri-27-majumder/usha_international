@@ -45,6 +45,10 @@
     margin-bottom: 4rem;
     margin-top: 3rem;
     gap: 200px;
+    .canvas-container {
+      width: 360px;
+      height: 540px
+    }
 
     .content {
       flex: 1;
