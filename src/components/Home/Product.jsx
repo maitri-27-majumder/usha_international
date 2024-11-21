@@ -9,9 +9,9 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Products = () => {
-  function Model({ path, position, scale }) {
+  function Model({ path, position, scale ,rotation }) {
     const { scene } = useGLTF(path);
-    return <primitive object={scene} scale={scale} position={position} />;
+    return <primitive object={scene} scale={scale} position={position} rotation={rotation} />;
   }
   const products = [
     {
@@ -53,7 +53,7 @@ const Products = () => {
               maxDistance={7}
               enablePan={false}
             />
-            <Model path={"/tea.glb"} position={[1, 0, 0]} scale={18} />
+            <Model path={"/coffee_cup.glb"} position={[0, -1, 0]} scale={2.5} />
           </Canvas>
         </div>
       ),
@@ -102,21 +102,28 @@ const Products = () => {
         </div>
       ),
     },
-    // {
-    //   name: "Honey: Pure, Natural Sweetness",
-    //   description:
-    //     "Our range of premium dry fruits, including almonds, cashews, and raisins, delivers a healthy snack option. Carefully selected and packaged, they provide freshness and natural goodness in every bite",
-    //   image: honey,
-    //   link: "/products/honey",
-    //   iframe: (
-    //     <iframe
-    //       src="https://skybox.blockadelabs.com/e/dc0ceb93fab5c75d54607aff68e29ad1"
-    //       width="540"
-    //       height="360"
-    //       frameBorder="0"
-    //     ></iframe>
-    //   ),
-    // },
+    {
+      name: "Honey: Pure, Natural Sweetness",
+      description:
+        "Our range of premium dry fruits, including almonds, cashews, and raisins, delivers a healthy snack option. Carefully selected and packaged, they provide freshness and natural goodness in every bite",
+      image: honey,
+      link: "/products/honey",
+      iframe: (
+        <div className="canvas-container">
+         <Canvas camera={{ position: [6,4, -2], fov: 50 }} style={{ width: "100%", height: "100%" }}>
+          <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 10]} intensity={2} />
+            {/* <directionalLight position={[-10, -10, -10]} intensity={1} /> */}
+            <OrbitControls
+              minDistance={4}
+              maxDistance={7}
+              enablePan={false}
+            />
+          <Model path={"/honey.glb"} position={[0, -1, 0]} scale={6} rotation={[0, Math.PI/1.3, 0]}/>
+        </Canvas>
+      </div>
+      ),
+    },
   ];
 
   return (

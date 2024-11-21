@@ -10,7 +10,7 @@ import social from "../assets/SocialMedia.png";
 import facebook from "../assets/Facebook.png";
 import insta from "../assets/Instagram.png";
 import linkedin from "../assets/LinkedIN.png";
-import map from "../assets/map.png";
+import map from "../assets/worldmap.png";
 
 const Contactus = () => {
   const {

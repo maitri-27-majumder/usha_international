@@ -55,7 +55,7 @@ const Aboutus = () => {
             <div className="paragraph">
               CHOOSE USHA INTERNATIONAL because - At Usha International, your
               satisfaction is our top priority, and we go above and beyond to
-              deliver excellence every time. CHOOSE USHA INTERNATIONAL.
+              deliver excellence every time.
             </div>
           </div>
           <div>
