@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
           setIsVisible(true); // Set animation when section enters view
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
+      { threshold: 0.1 } // Trigger when 50% of the section is visible
     );
 
     if (sectionRef.current) {

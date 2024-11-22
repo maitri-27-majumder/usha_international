@@ -151,6 +151,10 @@
         width: 100%;
         transform: translateX(0); /* Add some space between image and text */
       }
+      .canvas-container {
+        width: 240px;
+        height: 360px;
+      }
     }
 
     @media (max-width: 480px) {

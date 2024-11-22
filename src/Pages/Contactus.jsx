@@ -184,6 +184,7 @@ const Contactus = () => {
                   <input
                     name="firstName"
                     onChange={handleInputChange}
+                    required
                     // {...register("firstName", { required: true })}
                   />
                   {/* {errors.firstName && <span>This field is required</span>} */}
@@ -194,6 +195,7 @@ const Contactus = () => {
                   <input
                     name="lastName"
                     onChange={handleInputChange}
+                    required
                     // {...register("lastName")}
                   />
                 </div>
@@ -204,6 +206,7 @@ const Contactus = () => {
                   name="email"
                   type="email"
                   onChange={handleInputChange}
+                  required
                   // {...register("email", { required: true })}
                 />
                 {/* {errors.email && <span>This field is required</span>} */}
@@ -215,6 +218,7 @@ const Contactus = () => {
                     type="tel"
                     name="phoneNumber"
                     onChange={handleInputChange}
+                    required
                     // {...register("phoneNo", { required: true })}
                   />
                   {/* {errors.phoneNo && <span>This field is required</span>} */}
