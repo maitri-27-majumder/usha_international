@@ -281,7 +281,7 @@
   /* Benefits Section */
   .benefits-section {
     flex-direction: column; /* Stack content vertically */
-    padding: 5px;
+    padding: 5px 80px !important;
     gap: 10px;
   }
 
@@ -302,7 +302,7 @@
   .benefits-section .benefits-content ul {
     font-size: 0.9rem; /* Adjust list font size */
     padding-left: 1rem; /* Reduce padding */
-    gap: 10px;
+    gap: 30px !important;
   }
 
   .benefits-section .benefits-content ul li {
@@ -369,6 +369,7 @@
     max-width: 90vw;
     flex-direction: column; /* Stack content vertically on tablet */
     gap: 20px;
+    padding: 10px 80px !important;
   }
 
   .benefits-section .benefits-image-wrapper {
@@ -382,7 +383,7 @@
 
   .benefits-section .benefits-content ul {
     font-size: 1rem; /* Adjust font size */
-    gap: 15px; /* Adjust list spacing */
+    gap: 30px !important; /* Adjust list spacing */
   }
 }
 
