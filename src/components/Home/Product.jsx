@@ -6,14 +6,70 @@ import handicrafts from "../../assets/handicrafts.png";
 import furniture from "../../assets/furniture.png";
 import honey from "../../assets/honey.png";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import {
+  ContactShadows,
+  Environment,
+  OrbitControls,
+  useGLTF,
+} from "@react-three/drei";
+import * as THREE from "three";
 
 const Products = () => {
-  function Model({ path, position, scale ,rotation }) {
+  function Model({ path, position, scale, rotation }) {
     const { scene } = useGLTF(path);
-    return <primitive object={scene} scale={scale} position={position} rotation={rotation} />;
+    return (
+      <primitive
+        object={scene}
+        scale={scale}
+        position={position}
+        rotation={rotation}
+      />
+    );
   }
   const products = [
+    {
+      name: "Handicrafts: Artistry in Every Detail",
+      description:
+        "Our exquisite collection of handicrafts showcases Indias rich artistic traditions. Each piece, from decorative items to functional crafts, is handcrafted with skill and care, making it a perfect addition to homes and businesses.",
+      image: handicrafts,
+      link: "/products/handicrafts",
+      iframe: (
+        <div className="canvas-container">
+          <Canvas
+            camera={{ position: [2, 5, 5], fov: 50 }}
+            style={{ width: "100%", height: "100%" }}
+          >
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 10]} intensity={2} />
+            <directionalLight position={[-10, -10, -10]} intensity={1} />
+            <OrbitControls minDistance={4} maxDistance={7} enablePan={false} />
+            <Model path={"/handicraft.glb"} position={[0, -2, 0]} scale={1} />
+          </Canvas>
+        </div>
+      ),
+    },
+    {
+      name: "Furniture: Craftsmanship and Comfort",
+      description:
+        "Enhance your living spaces with our beautifully crafted furniture, where aesthetics meet functionality. Each piece is designed with attention to detail, blending modern design with timeless comfort. Whether for homes or offices, our furniture adds elegance and durability to any environment.",
+      image: furniture,
+      link: "/products/furniture",
+      iframe: (
+        <div className="canvas-container">
+          <Canvas
+            camera={{ position: [-6, 2, 5], fov: 50 }}
+            style={{ width: "100%", height: "100%" }}
+          >
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 10]} intensity={2} />
+            <directionalLight position={[-10, -10, -10]} intensity={1} />
+            <OrbitControls minDistance={4} maxDistance={7} enablePan={false} />
+            <Model path={"/furniture.glb"} position={[0, 0, 0]} scale={4} />
+          </Canvas>
+        </div>
+      ),
+    },
+
     {
       name: "Spices: Flavorful Heritage",
       description:
@@ -22,15 +78,14 @@ const Products = () => {
       link: "/products/spices",
       iframe: (
         <div className="canvas-container">
-          <Canvas camera={{ position: [6,4, -2], fov: 50 }} style={{ width: "100%", height: "100%" }}>
-          <ambientLight intensity={1} />
-          <directionalLight position={[10, 10, 10]} intensity={2} />
-          <directionalLight position={[-10, -10, -10]} intensity={1} />
-            <OrbitControls
-              minDistance={4}
-              maxDistance={7}
-              enablePan={false}
-            />
+          <Canvas
+            camera={{ position: [6, 4, -2], fov: 50 }}
+            style={{ width: "100%", height: "100%" }}
+          >
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 10]} intensity={2} />
+            <directionalLight position={[-10, -10, -10]} intensity={1} />
+            <OrbitControls minDistance={4} maxDistance={7} enablePan={false} />
             <Model path={"/spices.glb"} position={[0, -1, 0]} scale={15} />
           </Canvas>
         </div>
@@ -44,60 +99,15 @@ const Products = () => {
       link: "/products/tea",
       iframe: (
         <div className="canvas-container">
-          <Canvas camera={{ position: [2, 7, 5], fov: 50 }} style={{ width: "100%", height: "100%" }}>
-          <ambientLight intensity={1} />
+          <Canvas
+            camera={{ position: [2, 7, 5], fov: 50 }}
+            style={{ width: "100%", height: "100%" }}
+          >
+            <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={2} />
             {/* <directionalLight position={[-10, -10, -10]} intensity={1} /> */}
-            <OrbitControls
-              minDistance={4}
-              maxDistance={7}
-              enablePan={false}
-            />
+            <OrbitControls minDistance={4} maxDistance={7} enablePan={false} />
             <Model path={"/coffee_cup.glb"} position={[0, -1, 0]} scale={2.5} />
-          </Canvas>
-        </div>
-      ),
-    },
-    {
-      name: "Handicrafts: Artistry in Every Detail",
-      description:
-        "Our exquisite collection of handicrafts showcases Indias rich artistic traditions. Each piece, from decorative items to functional crafts, is handcrafted with skill and care, making it a perfect addition to homes and businesses.",
-      image: handicrafts,
-      link: "/products/handicrafts",
-      iframe: (
-        <div className="canvas-container">
-          <Canvas camera={{ position: [2, 5, 5], fov: 50 }} style={{ width: "100%", height: "100%" }}>
-          <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={2} />
-            <directionalLight position={[-10, -10, -10]} intensity={1} />
-            <OrbitControls
-              minDistance={4}
-              maxDistance={7}
-              enablePan={false}
-            />
-            <Model path={"/handicraft.glb"} position={[0, -2, 0]} scale={8} />
-          </Canvas>
-        </div>
-      ),
-    },
-    {
-      name: "Furniture: Craftsmanship and Comfort",
-      description:
-        "Enhance your living spaces with our beautifully crafted furniture, where aesthetics meet functionality. Each piece is designed with attention to detail, blending modern design with timeless comfort. Whether for homes or offices, our furniture adds elegance and durability to any environment.",
-      image: furniture,
-      link: "/products/furniture",
-      iframe: (
-        <div className="canvas-container">
-          <Canvas camera={{ position: [-6, 2, 5], fov: 50 }} style={{ width: "100%", height: "100%" }}>
-          <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={2} />
-            <directionalLight position={[-10, -10, -10]} intensity={1} />
-            <OrbitControls
-              minDistance={4}
-              maxDistance={7}
-              enablePan={false}
-            />
-            <Model path={"/furniture.glb"} position={[0, 0, 0]} scale={4}/>
           </Canvas>
         </div>
       ),
@@ -110,18 +120,55 @@ const Products = () => {
       link: "/products/honey",
       iframe: (
         <div className="canvas-container">
-         <Canvas camera={{ position: [6,4, -2], fov: 50 }} style={{ width: "100%", height: "100%" }}>
-          <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={2} />
-            {/* <directionalLight position={[-10, -10, -10]} intensity={1} /> */}
-            <OrbitControls
-              minDistance={4}
-              maxDistance={7}
-              enablePan={false}
+          <Canvas
+            camera={{ position: [6, 4, -2], fov: 50 }}
+            style={{ width: "100%", height: "100%" }}
+            gl={{
+              outputEncoding: THREE.sRGBEncoding,
+              toneMapping: THREE.ACESFilmicToneMapping,
+              antialias: true,
+            }}
+          >
+            {/* Lighting setup */}
+            <ambientLight intensity={0.3} />
+            <directionalLight
+              position={[10, 10, 10]}
+              intensity={2}
+              castShadow
+              shadow-mapSize-width={1024}
+              shadow-mapSize-height={1024}
             />
-          <Model path={"/honey.glb"} position={[0, -1, 0]} scale={6} rotation={[0, Math.PI/1.3, 0]}/>
-        </Canvas>
-      </div>
+            <directionalLight
+              position={[10, -30, 10]}
+              intensity={2}
+              castShadow
+              shadow-mapSize-width={1024}
+              shadow-mapSize-height={1024}
+            />
+
+            {/* Environment for reflections */}
+            {/* <Environment preset="night" background /> */}
+
+            {/* Contact shadows for better ground interaction */}
+            <ContactShadows
+              position={[0, -1.5, 0]}
+              opacity={0.4}
+              scale={10}
+              blur={2.5}
+            />
+
+            {/* Model */}
+            <Model
+              path={"/honey_new.glb"}
+              position={[0, -1, 0]}
+              scale={20}
+              rotation={[0, Math.PI / 1.3, 0]}
+            />
+
+            {/* Camera controls */}
+            <OrbitControls minDistance={4} maxDistance={7} enablePan={false} />
+          </Canvas>
+        </div>
       ),
     },
   ];
@@ -146,8 +193,17 @@ const Products = () => {
                 Learn More
               </a>
             </div>
-            {/* <img src={product.image} alt={product.name} /> */}
-            {product.iframe}
+
+            <div style={{
+              position: "relative"
+            }}>
+              <img src="/360-degrees.png" alt={product.name} width={40} style={{
+                position: "absolute",
+                right: "46%",
+                top: "20px",
+              }}/>
+              {product.iframe}
+            </div>
           </div>
         ))}
       </div>

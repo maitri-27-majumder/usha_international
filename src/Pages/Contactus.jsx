@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import "../styles/Contactus.scss";
 import office from "../assets/office.png";
 import flag from "../assets/flag.png";
@@ -11,22 +11,26 @@ import facebook from "../assets/Facebook.png";
 import insta from "../assets/Instagram.png";
 import linkedin from "../assets/LinkedIN.png";
 import map from "../assets/worldmap.png";
+import { db } from "../../firebase";
+import { set, ref, push } from "firebase/database";
 
 const Contactus = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm();
 
-  const [formData, setFormData] = useState({
+  const initialState = {
     firstName: "",
     lastName: "",
     email: "",
     company: "",
     phoneNumber: "",
     message: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialState);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,42 +40,39 @@ const Contactus = () => {
     }));
   };
 
+  const Push = () => {
+    const contactRef = push(ref(db, "contact"));
+    set(contactRef, {
+      name: formData.firstName + " " + formData.lastName,
+      email: formData.email,
+      company: formData.company,
+      phoneNumber: formData.phoneNumber,
+      message: formData.message,
+      formType: "contact-us",
+    })
+      .then(() => {
+        setFormData(initialState);
+        alert("Thank you for contacting us. We'll reach out shortly.");
+      })
+      .catch((error) => {
+        alert("Something went wrong!");
+      });
+    // db.ref("contact")
+    //   .set({
+    //     name: formData.firstName + " " + formData.lastName,
+    //     email: formData.email,
+    //     company: formData.company,
+    //     phoneNumber: formData.phoneNumber,
+    //     message: formData.message,
+    //     formType: "contact-us",
+    //   })
+    //   .catch(alert);
+  };
+
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(
-        "https://api.shihasantech/admin/Contact/CreatesVisitor",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            name: formData.firstName + formData.lastName,
-            email: formData.email,
-            company: formData.company,
-            phoneNumber: formData.phoneNumber,
-            message: formData.message,
-            formType: "contact-us",
-            industry: formData.industy,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-        //   body: JSON.stringify(formData),
-      );
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      } else {
-        console.log("send response succesfully");
-        window.location.href = "/thank-you";
-      }
-      const data = await response.json();
-    } catch (error) {
-      console.error(
-        "There has been a problem with your fetch operation:",
-        error
-      );
-    }
+    Push();
   };
 
   const contactCard = [
@@ -183,9 +184,9 @@ const Contactus = () => {
                   <input
                     name="firstName"
                     onChange={handleInputChange}
-                    {...register("firstName", { required: true })}
+                    // {...register("firstName", { required: true })}
                   />
-                  {errors.firstName && <span>This field is required</span>}
+                  {/* {errors.firstName && <span>This field is required</span>} */}
                 </div>
 
                 <div>
@@ -193,7 +194,7 @@ const Contactus = () => {
                   <input
                     name="lastName"
                     onChange={handleInputChange}
-                    {...register("lastName")}
+                    // {...register("lastName")}
                   />
                 </div>
               </div>
@@ -203,9 +204,9 @@ const Contactus = () => {
                   name="email"
                   type="email"
                   onChange={handleInputChange}
-                  {...register("email", { required: true })}
+                  // {...register("email", { required: true })}
                 />
-                {errors.email && <span>This field is required</span>}
+                {/* {errors.email && <span>This field is required</span>} */}
               </div>
               <div className="namefieldwrapper">
                 <div className="namefield">
@@ -214,9 +215,9 @@ const Contactus = () => {
                     type="tel"
                     name="phoneNumber"
                     onChange={handleInputChange}
-                    {...register("phoneNo", { required: true })}
+                    // {...register("phoneNo", { required: true })}
                   />
-                  {errors.phoneNo && <span>This field is required</span>}
+                  {/* {errors.phoneNo && <span>This field is required</span>} */}
                 </div>
 
                 <div>
@@ -224,7 +225,7 @@ const Contactus = () => {
                   <input
                     name="company"
                     onChange={handleInputChange}
-                    {...register("companyName")}
+                    // {...register("companyName")}
                   />
                 </div>
               </div>
@@ -235,7 +236,7 @@ const Contactus = () => {
                   name="message"
                   rows={5}
                   onChange={handleInputChange}
-                  {...register("help")}
+                  // {...register("help")}
                 />
               </div>
               <div className="helpfield">
