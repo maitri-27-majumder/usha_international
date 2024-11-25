@@ -80,7 +80,7 @@ const Contactus = () => {
       image: office,
       heading: "Office",
       image2: flag,
-      para1: "Kala Pahar, Guwahati, 560068, India",
+      para1: "Kala Pahar, Guwahati, 781018, India",
     },
     {
       image: contact,
@@ -88,7 +88,7 @@ const Contactus = () => {
       image2: call,
       image3: mail,
       para1: "+919599513207",
-      para2: "info@international.com",
+      para2: "info@ushainternational.co",
     },
     {
       image: social,

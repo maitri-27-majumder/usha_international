@@ -82,7 +82,7 @@ const Members = () => {
             <div>{current.data?.designation}</div>
             <div>{current.data?.description}</div>
             <div>
-              <div>{current.data?.email || "info@international.com"}</div>
+              <div>{current.data?.email || "info@ushainternational.co"}</div>
               <div>+919599513207</div>
             </div>
           </div>
