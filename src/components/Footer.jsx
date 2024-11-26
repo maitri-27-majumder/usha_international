@@ -82,7 +82,7 @@ const Footer = () => {
             <div><a
                 href="https://www.facebook.com/profile.php?id=61566565374203&mibextid=ZbWKwL"
               >
-                info@international.com
+                info@ushainternational.co
               </a>
               </div>
               <div>
